@@ -32,6 +32,7 @@ def readNums(File): # to read numbers only from a file for weights and patterns 
     for l in f:
         l = l[0:l.find('#')] # anything followed by a '#' will be ignored
         data = data + [float(x) for x in l.split()] # two numbers must be seprated with a whitespace
+    f.close()
     return data
 
 def readPatterns(File, N, M): # to read training and test patterns from a file using readNums function and form them in a desirable way for further process 
